@@ -7,3 +7,5 @@ RUN apk --no-cache add postgresql-dev zlib-dev curl-dev icu-dev libzip-dev gmp-d
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && apk del buildDeps
+
+COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
